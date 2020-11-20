@@ -19,8 +19,8 @@ const App = (function() {
 		.then(result => {
 			result.forEach(item => listOfAllGenres.push(...item.genres))
 			cardsToHtml.print(result);
-            showModal(cardsToHtml.cards, result);
-            printSelect(listOfAllGenres);
+            		showModal(cardsToHtml.cards, result);
+            		printSelect(listOfAllGenres);
 			downloadingFavList();
 		})
 
