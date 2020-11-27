@@ -19,8 +19,8 @@ const App = (function() {
 		.then(result => {
 			result.forEach(item => listOfAllGenres.push(...item.genres))
 			cardsToHtml.print(result);
-            		showModal(cardsToHtml.cards, result);
-            		printSelect(listOfAllGenres);
+            showModal(cardsToHtml.cards, result);
+            printSelect(listOfAllGenres);
 			downloadingFavList();
 		})
 
@@ -76,14 +76,14 @@ const App = (function() {
 							<span>${data.year}</span>
 						</div>
 						<div class="modal-genres">
-							${data.genres}
+							${data.genres.join(', ')}
 						</div>
 					</div>
 					<div class="modal-text">
 						<h3 class="modal-title">${data.name}</h3>
 						<p class="modal-desc">${data.description}</p>
 						<p class="modal-director">Director: ${data.director}</p>
-						<p class="modal-starring">Starring: ${data.starring}</p>
+						<p class="modal-starring">Starring: ${data.starring.join(', ')}</p>
 					</div>
 					<button class="modal-exit" data-close='true'>&#10006;</button>
 				</div>
