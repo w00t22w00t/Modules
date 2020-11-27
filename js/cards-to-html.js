@@ -19,7 +19,7 @@ export const cardsToHtml = (function(){
 			</div>
 			<div class="card-text">
 				<p class="card-desc">${data.description}</p>
-				<p class="card-genres">${data.genres}</p>
+				<p class="card-genres">${data.genres.join(', ')}</p>
 			</div>
 		</div>
 		`);
